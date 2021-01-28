@@ -53,6 +53,11 @@ class ProductForm(ModelForm):
                     'placeholder': 'Ingrese un nombre',
                 }
             ),
+            'cat': Select(
+                attrs={
+                    'style': 'width: 100%'
+                }
+            ),
         }
 
     def save(self, commit=True):

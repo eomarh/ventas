@@ -67,7 +67,7 @@ class CategoryCreateView(CreateView):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Crear nueva categoría'
         context['entity'] = 'Categorias'
-        context['list_url'] = reverse_lazy('sistema:list')
+        context['list_url'] = self.success_url
         context['action'] = 'add'
         return  context
 
@@ -99,7 +99,7 @@ class CategoryUpdateView(UpdateView):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Editar una categoría'
         context['entity'] = 'Categorias'
-        context['list_url'] = reverse_lazy('sistema:list')
+        context['list_url'] = self.success_url
         context['action'] = 'update'
         return context
 
@@ -125,5 +125,5 @@ class CategoryDeleteView(DeleteView):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Eliminar una categoría'
         context['entity'] = 'Categorias'
-        context['list_url'] = reverse_lazy('sistema:list')
+        context['list_url'] = self.success_url
         return context
