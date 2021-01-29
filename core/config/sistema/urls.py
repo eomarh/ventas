@@ -3,6 +3,7 @@ from .views.category.views import *
 from .views.product.views import *
 from .views.dashboard.views import *
 from .views.client.views import *
+from .views.sale.views import *
 
 app_name = 'sistema'
 
@@ -19,6 +20,8 @@ urlpatterns = [
     path('product/delete/<int:pk>/', ProductDeleteView.as_view(), name='product_delete'),
     # client
     path('cliente/', ClientView.as_view(), name='cliente'),
+    #Sale
+    path('sale/add', SaleCreateView.as_view(), name='sale_create'),
     #Home
     path('dashboard/', DashboardView.as_view(), name='dashboard'),
 ]

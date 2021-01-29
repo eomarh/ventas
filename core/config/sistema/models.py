@@ -28,7 +28,7 @@ class Product(models.Model):
 
     def toJSON(self):
         item = model_to_dict(self)
-        item['cat'] = self.cat.toJSON()
+        item['cate'] = self.cate.toJSON()
         item['pvp'] = format(self.pvp, '.2f')
         return item
 

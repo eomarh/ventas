@@ -127,3 +127,39 @@ class ClientForm(ModelForm):
     #         raise forms.ValidationError('Validacion xxx')
     #         # self.add_error('name', 'Le faltan caracteres')
     #     return cleaned
+
+class SaleForm(ModelForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for form in self.visible_fields():
+            form.field.widget.attrs['class'] = 'form-control'
+            form.field.widget.attrs['autocomplete'] = 'off'
+        self.fields['cli'].widget.attrs['autofocus'] = True
+
+    class Meta:
+        model = Sale
+        fields = '__all__'
+        widgets = {
+            'cli': Select(
+                attrs={
+                    'class': 'form-control ',
+                    'style': 'width: 100%'
+                }
+            ),
+            'date_joined': DateInput(format='%Y-%m-%d',
+                attrs={
+                    'value': datetime.now().strftime('%Y-%m-%d'),
+                }
+            ),
+            'iva': TextInput(attrs={
+                'class': 'form-control',
+            }),
+            'subtotal': TextInput(attrs={
+                'readonly': True,
+                'class': 'form-control',
+            }),
+            'total': TextInput(attrs={
+                'readonly': True,
+                'class': 'form-control',
+            })
+        }
