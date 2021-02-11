@@ -3,7 +3,7 @@ title: ""
 tags: []
 ---
 
-![InicioSesion](/home/omaargraf/img6.png)
+![InicioSesion](/core/config/screens/img6.png)
 ![detCat](/home/omaargraf/img5.png)
 ![newCategory](/home/omaargraf/img4.png)
 ![listProducts](/home/omaargraf/img3.png)
