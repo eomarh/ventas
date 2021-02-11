@@ -1,11 +1,6 @@
----
-title: ""
-tags: []
----
-
 ![InicioSesion](/core/config/screens/img6.png)
-![detCat](/home/omaargraf/img5.png)
-![newCategory](/home/omaargraf/img4.png)
-![listProducts](/home/omaargraf/img3.png)
-![newClient](/home/omaargraf/img2.png)
-![detProducts](/home/omaargraf/img.png)
+![detCat](/core/config/screens/img5.png)
+![newCategory](/core/config/screens/img4.png)
+![listProducts](/core/config/screens/img3.png)
+![newClient](/core/config/screens/img2.png)
+![detProducts](/core/config/screens/img.png)
